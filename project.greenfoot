@@ -1,11 +1,14 @@
 #Greenfoot project file
 class.Elephant.image=elephant_idle.png
+dependency1.from=MyWorld
+dependency1.to=Elephant
+dependency1.type=UsesDependency
 editor.fx.0.height=728
 editor.fx.0.width=800
 editor.fx.0.x=240
-editor.fx.0.y=24
-height=400
-package.numDependencies=0
+editor.fx.0.y=23
+height=551
+package.numDependencies=1
 package.numTargets=2
 project.charset=UTF-8
 publish.hasSource=false
@@ -36,6 +39,7 @@ target2.width=120
 target2.x=0
 target2.y=0
 version=3.0.0
-width=1280
+width=830
+world.lastInstantiated=MyWorld
 xPosition=0
 yPosition=133
