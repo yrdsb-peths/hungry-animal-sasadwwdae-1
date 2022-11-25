@@ -34,6 +34,7 @@ public class Elephant extends Actor
         {
             setLocation(getX()-3,getY());
         }
+        eat();
     }
     
     public void eat()
