@@ -35,4 +35,14 @@ public class Elephant extends Actor
             setLocation(getX()-3,getY());
         }
     }
+    
+    public void eat()
+        {
+            if(isTouching(Apple.class))
+            {
+                removeTouching(Apple.class);
+                MyWorld world = (MyWorld) getWorld();
+                world.createApple();
+            }
+        }   
 }
