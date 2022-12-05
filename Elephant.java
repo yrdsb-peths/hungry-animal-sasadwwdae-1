@@ -42,7 +42,7 @@ public class Elephant extends Actor
     int imageIndex = 0;
     public void animateElephant()
     {
-        if(animationTimer.millisElapsed() < 20)
+        if(animationTimer.millisElapsed() < 230)
         {
             return;
         }
