@@ -28,8 +28,6 @@ public class MyWorld extends World
         addObject(scoreLabel,50,50);
         
         createApple();
-        
-        Apple.setSpeed(level);
     }
     
     public void gameOver()
@@ -44,6 +42,7 @@ public class MyWorld extends World
         int x = Greenfoot.getRandomNumber(600);
         int y = (0);
         addObject(apple,x,y);
+        apple.setSpeed(level);
     }
     
     public void increaseScore()
