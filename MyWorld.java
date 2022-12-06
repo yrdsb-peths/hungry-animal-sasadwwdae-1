@@ -23,6 +23,7 @@ public class MyWorld extends World
         
         Elephant elephant = new Elephant();
         addObject(elephant,300,300);
+        elephant.setSize(score);
         
         scoreLabel = new Label(0, 80);
         addObject(scoreLabel,50,50);

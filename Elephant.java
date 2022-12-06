@@ -99,5 +99,11 @@ public class Elephant extends Actor
                 world.increaseScore();
                 elephantSound.play();
             }
-        }   
+        }  
+    
+    int size = 80;
+    public void setSize(int sz)
+    {
+        size = size + sz;
+    }
 }

@@ -19,6 +19,7 @@ public class Apple extends Actor
     {
         speed = spd;
     }
+    
     public void act()
     {
         // Add your action code here.
