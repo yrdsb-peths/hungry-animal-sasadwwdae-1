@@ -86,6 +86,7 @@ public class Elephant extends Actor
         eat();
         
         animateElephant();
+        
     }
     
     public void eat()
