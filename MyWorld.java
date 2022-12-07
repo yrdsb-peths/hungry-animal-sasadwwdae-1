@@ -51,7 +51,7 @@ public class MyWorld extends World
     {
         Cat cat = new Cat();
         int x = (0);
-        int y = Greenfoot.getRandomNumber(200);
+        int y = Greenfoot.getRandomNumber(400);
         addObject(cat,x,y);
         cat.setSpeed(1 + level);
     }
@@ -60,8 +60,10 @@ public class MyWorld extends World
     {
         score++;
         scoreLabel.setValue(score);
-        if(score % 5 == 0)
+        int i = 1;
+        if(score % 5 == 0 || score / 5 >= i)
         {
+            i++;
             level += 1;
         }
     }
