@@ -29,7 +29,7 @@ public class Cat extends Actor
             removeTouching(Apple.class);
             MyWorld world = (MyWorld) getWorld();
             world.createApple();
-            world.decreaseScore();
+            world.decreaseScore(1);
         }
 
         MyWorld world = (MyWorld) getWorld();

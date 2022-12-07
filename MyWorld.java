@@ -60,17 +60,20 @@ public class MyWorld extends World
     {
         score++;
         scoreLabel.setValue(score);
-        int i = 1;
-        if(score % 5 == 0 || score / 5 >= i)
+        int i = score / 5;
+        if(i >= 1)
         {
-            i++;
-            level += 1;
+            level = i + 1;
+        }
+        else
+        {
+            level = 1;
         }
     }
     
-    public void decreaseScore()
+    public void decreaseScore(int sc)
     {
-        score--;
+        score = score - sc;
         scoreLabel.setValue(score);
     }
 }
