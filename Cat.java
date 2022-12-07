@@ -35,8 +35,8 @@ public class Cat extends Actor
         MyWorld world = (MyWorld) getWorld();
         if(getX() >= world.getWidth())
         {
-            removeTouching(Cat.class);
             world.createCat();
+            world.removeObject(this);
         }
     }
 
