@@ -30,6 +30,14 @@ public class TitleScreen extends World
             MyWorld gameWorld = new MyWorld();
             Greenfoot.setWorld(gameWorld);
         }
+        
+
+    
+        if(Greenfoot.isKeyDown("i"))
+        {
+            Introduction gameWorld = new Introduction();
+            Greenfoot.setWorld(gameWorld);
+        }
     }
     
     /**
@@ -45,5 +53,8 @@ public class TitleScreen extends World
         Label label = new Label("press space to start the game", 40);
         addObject(label,310,297);
         label.setLocation(310,298);
+        Label label2 = new Label("Press <i> to see the introcuction", 40);
+        addObject(label2,290,340);
+        label2.setLocation(325,347);
     }
 }
