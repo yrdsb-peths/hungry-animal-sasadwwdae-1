@@ -31,5 +31,12 @@ public class Apple extends Actor
             GameOver gameWorld = new GameOver();
             Greenfoot.setWorld(gameWorld);
         }
+        
+        MyWorldDoublePlayer worldTwo = (MyWorldDoublePlayer) getWorld();
+        if(getY() >= world.getHeight())
+        {
+            GameOver gameWorld = new GameOver();
+            Greenfoot.setWorld(gameWorld);
+        }
     }
 }
