@@ -9,6 +9,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class GameOver extends World
 {
 
+    boolean changeWorld = false;
     /**
      * Constructor for objects of class GameOver.
      * 
@@ -18,6 +19,13 @@ public class GameOver extends World
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(600, 400, 1); 
         prepare();
+        
+        createApple();
+        
+        Elephant elephant = new Elephant();
+        addObject(elephant,300,100);
+        
+        changeWorld = elephant.getEatApple();
     }
     
     /**
@@ -29,8 +37,22 @@ public class GameOver extends World
         Label label = new Label("Game Over", 80);
         addObject(label,282,190);
         label.setLocation(300,200);
-        Elephant elephant = new Elephant();
-        addObject(elephant,296,282);
-        elephant.setLocation(334,282);
+    }
+    
+    public void createApple()
+    {
+        Apple appleOne = new Apple();
+        int x = Greenfoot.getRandomNumber(600);
+        int y = (0);
+        addObject(appleOne,x,y);
+    }
+    
+    public void act()
+    {
+        if(changeWorld)
+        {
+            MyWorld gameWorld = new MyWorld();
+            Greenfoot.setWorld(gameWorld);
+        }
     }
 }

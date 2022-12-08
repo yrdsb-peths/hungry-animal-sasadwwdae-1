@@ -18,6 +18,8 @@ public class Elephant extends Actor
 
     String facing = "right";
     SimpleTimer animationTimer = new SimpleTimer();
+    
+    boolean eatApple = false;
 
     public Elephant()
     {
@@ -98,6 +100,7 @@ public class Elephant extends Actor
             world.createApple();
             world.increaseScore();
             elephantSound.play();
+            eatApple = true;
         }
         
         if(isTouching(Cat.class))
@@ -115,4 +118,8 @@ public class Elephant extends Actor
         size = size + sz;
     }
 
+    public boolean getEatApple()
+    {
+        return eatApple;
+    }
 }

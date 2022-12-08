@@ -38,6 +38,8 @@ public class Cat extends Actor
             world.createCat();
             world.removeObject(this);
         }
+        
+        animateCat();
     }
 
     public void setSpeed(int spd)
@@ -62,7 +64,7 @@ public class Cat extends Actor
     int imageIndex = 0;
     public void animateCat()
     {
-        if(animationTimer.millisElapsed() < 230)
+        if(animationTimer.millisElapsed() < 200)
         {
             return;
         }
