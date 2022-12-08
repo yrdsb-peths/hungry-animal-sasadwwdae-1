@@ -100,7 +100,6 @@ public class Elephant extends Actor
             world.createApple();
             world.increaseScore();
             elephantSound.play();
-            eatApple = true;
         }
         
         if(isTouching(Cat.class))
@@ -109,6 +108,13 @@ public class Elephant extends Actor
             MyWorld world = (MyWorld) getWorld();
             world.createCat();
             world.decreaseScore(10);
+        }
+        
+        if(isTouching(AnotherApple.class))
+        {
+            removeTouching(AnotherApple.class);
+            elephantSound.play();
+            eatApple = true;
         }
     }  
 

@@ -20,12 +20,12 @@ public class GameOver extends World
         super(600, 400, 1); 
         prepare();
         
-        createApple();
-        
         Elephant elephant = new Elephant();
         addObject(elephant,300,100);
         
         changeWorld = elephant.getEatApple();
+        
+        createAnotherApple();
     }
     
     /**
@@ -39,12 +39,12 @@ public class GameOver extends World
         label.setLocation(300,200);
     }
     
-    public void createApple()
+    public void createAnotherApple()
     {
-        Apple appleOne = new Apple();
+        AnotherApple apple = new AnotherApple();
         int x = Greenfoot.getRandomNumber(600);
         int y = (0);
-        addObject(appleOne,x,y);
+        addObject(apple,x,y);
     }
     
     public void act()
