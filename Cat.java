@@ -39,6 +39,14 @@ public class Cat extends Actor
             world.removeObject(this);
         }
         
+        MyWorldDoublePlayer worldOne = (MyWorldDoublePlayer) getWorld();
+        if(getX() >= world.getWidth())
+        {
+            worldOne.createCat();
+            worldOne.removeObject(this);
+        }
+        
+        
         animateCat();
     }
 
@@ -70,5 +78,7 @@ public class Cat extends Actor
         }
         animationTimer.mark();
         imageIndex = (imageIndex + 1) % idleRight.length;
+        setImage(idleRight[imageIndex]);
     }
+
 }
