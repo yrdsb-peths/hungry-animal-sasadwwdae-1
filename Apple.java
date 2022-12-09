@@ -25,14 +25,13 @@ public class Apple extends Actor
         // Add your action code here.
         setLocation(getX(),getY()+speed);
 
-        MyWorld world = (MyWorld) getWorld();
+        World world = getWorld();
         if(getY() >= world.getHeight())
         {
             GameOver gameWorld = new GameOver();
             Greenfoot.setWorld(gameWorld);
         }
         
-        MyWorldDoublePlayer worldTwo = (MyWorldDoublePlayer) getWorld();
         if(getY() >= world.getHeight())
         {
             GameOver gameWorld = new GameOver();
