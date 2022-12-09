@@ -64,23 +64,23 @@ public class ElephantTwo extends Actor
     public void act()
     {
         // Add your action code here.
-        if(Greenfoot.isKeyDown("w"))
+        if(Greenfoot.isKeyDown("downarrow"))
         {
             setLocation(getX(),getY()-3);
         }
 
-        if(Greenfoot.isKeyDown("s"))
+        if(Greenfoot.isKeyDown("uparrow"))
         {
             setLocation(getX(),getY()+3);
         }
 
-        if(Greenfoot.isKeyDown("d"))
+        if(Greenfoot.isKeyDown("rightarrow"))
         {
             setLocation(getX()+3,getY());
             facing = "right";
         }
 
-        if(Greenfoot.isKeyDown("a"))
+        if(Greenfoot.isKeyDown("leftarrow"))
         {
             setLocation(getX()-3,getY());
             facing = "left";
