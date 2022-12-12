@@ -38,15 +38,6 @@ public class Cat extends Actor
             world.createCat();
             world.removeObject(this);
         }
-        
-        MyWorldDoublePlayer worldOne = (MyWorldDoublePlayer) getWorld();
-        if(getX() >= world.getWidth())
-        {
-            worldOne.createCat();
-            worldOne.removeObject(this);
-        }
-        
-        
         animateCat();
     }
 
