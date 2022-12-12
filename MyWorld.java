@@ -11,6 +11,7 @@ public class MyWorld extends World
     public int score;
     Label scoreLabel;
     int level = 1;
+    Cat cat = new Cat();
 
     /**
      * Constructor for objects of class MyWorld.
@@ -49,7 +50,6 @@ public class MyWorld extends World
     
     public void createCat()
     {
-        Cat cat = new Cat();
         int x = (0);
         int y = Greenfoot.getRandomNumber(400);
         addObject(cat,x,y);
@@ -75,5 +75,14 @@ public class MyWorld extends World
     {
         score = score - sc;
         scoreLabel.setValue(score);
+    }
+    
+    public void act()
+    {
+        if(cat.getX()>=this.getWidth())
+        {
+            this.createCat();
+            this.removeObject(cat);
+        }
     }
 }

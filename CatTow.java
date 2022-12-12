@@ -1,14 +1,13 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Cat here.
+ * Write a description of class CatTow here.
  * 
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Cat extends Actor
+public class CatTow extends Actor
 {
-
     GreenfootImage[] idleRight = new GreenfootImage[6];
     GreenfootImage[] idleLeft = new GreenfootImage[6];
     SimpleTimer animationTimer = new SimpleTimer();
@@ -31,6 +30,13 @@ public class Cat extends Actor
             world.createApple();
             world.decreaseScore(1);
         }
+
+        MyWorldDoublePlayer worldOne = (MyWorldDoublePlayer) getWorld();
+        if(getX() >= worldOne.getWidth())
+        {
+            worldOne.createCat();
+            worldOne.removeObject(this);
+        }
     }
 
     public void setSpeed(int spd)
@@ -38,7 +44,7 @@ public class Cat extends Actor
         speed = spd;
     }
 
-    public Cat()
+    public CatTow()
     {
 
         for(int i=0; i < idleRight.length; i++)
@@ -63,5 +69,4 @@ public class Cat extends Actor
         imageIndex = (imageIndex + 1) % idleRight.length;
         setImage(idleRight[imageIndex]);
     }
-
 }
