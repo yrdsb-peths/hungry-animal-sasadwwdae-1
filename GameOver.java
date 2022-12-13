@@ -25,7 +25,6 @@ public class GameOver extends World
         
         changeWorld = elephant.getEatApple();
         
-        createAnotherApple();
     }
     
     /**
@@ -37,14 +36,6 @@ public class GameOver extends World
         Label label = new Label("Game Over", 80);
         addObject(label,282,190);
         label.setLocation(300,200);
-    }
-    
-    public void createAnotherApple()
-    {
-        AnotherApple apple = new AnotherApple();
-        int x = Greenfoot.getRandomNumber(600);
-        int y = (0);
-        addObject(apple,x,y);
     }
     
     public void act()

@@ -31,7 +31,15 @@ public class Cat extends Actor
             world.createApple();
             world.decreaseScore(1);
         }
+        
+        MyWorld world = (MyWorld) getWorld();
+        if(getX() >= world.getWidth())
+        {
+            world.createCat();
+             world.removeObject(this);
+        }
     }
+
 
     public void setSpeed(int spd)
     {

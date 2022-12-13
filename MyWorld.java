@@ -77,12 +77,5 @@ public class MyWorld extends World
         scoreLabel.setValue(score);
     }
     
-    public void act()
-    {
-        if(cat.getX()>=this.getWidth())
-        {
-            this.createCat();
-            this.removeObject(cat);
-        }
-    }
+    
 }

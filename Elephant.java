@@ -109,13 +109,6 @@ public class Elephant extends Actor
             world.createCat();
             world.decreaseScore(10);
         }
-        
-        if(isTouching(AnotherApple.class))
-        {
-            removeTouching(AnotherApple.class);
-            elephantSound.play();
-            eatApple = true;
-        }
     }  
 
     int size = 80;

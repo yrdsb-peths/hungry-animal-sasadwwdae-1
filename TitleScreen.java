@@ -31,13 +31,6 @@ public class TitleScreen extends World
             Greenfoot.setWorld(gameWorld);
         }
         
-        if(Greenfoot.isKeyDown("d"))
-        {
-            MyWorldDoublePlayer gameWorld = new MyWorldDoublePlayer();
-            Greenfoot.setWorld(gameWorld);
-        }
-
-    
         if(Greenfoot.isKeyDown("i"))
         {
             Introduction gameWorld = new Introduction();
