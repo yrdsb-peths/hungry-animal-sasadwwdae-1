@@ -35,8 +35,8 @@ public class Cat extends Actor
         MyWorld world = (MyWorld) getWorld();
         if(getX() >= world.getWidth())
         {
+            world.removeObject(this);
             world.createCat();
-             world.removeObject(this);
         }
     }
 
