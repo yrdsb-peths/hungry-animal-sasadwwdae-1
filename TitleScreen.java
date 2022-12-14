@@ -54,7 +54,7 @@ public class TitleScreen extends World
         Label label2 = new Label("Press <i> to see the introcuction", 40);
         addObject(label2,290,340);
         label2.setLocation(325,347);
-        Label label3 = new Label("Press D if have two player", 40);
+        Label label3 = new Label("Press m if have two player", 40);
         addObject(label3,214,259);
         label3.setLocation(326,253);
         label3.setLocation(296,254);

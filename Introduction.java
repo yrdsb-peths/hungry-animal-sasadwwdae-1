@@ -52,5 +52,8 @@ public class Introduction extends World
         label2.setLocation(312,134);
         label3.setLocation(310,187);
         label4.setLocation(295,294);
+        Label label5 = new Label("inter the world then press space or m start the game", 30);
+        addObject(label5,299,254);
+        label5.setLocation(385,339);
     }
 }

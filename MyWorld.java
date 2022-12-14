@@ -21,24 +21,20 @@ public class MyWorld extends World
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(600, 400, 1, false); 
-        
-        Elephant elephant = new Elephant();
-        addObject(elephant,300,300);
-        elephant.setSize(score);
-        
+
         scoreLabel = new Label(0, 80);
         addObject(scoreLabel,50,50);
-        
+
         createApple();
         createCat();
     }
-    
+
     public void gameOver()
     {
         Label gameOverLabel = new Label("Game Over:",100);
         addObject(gameOverLabel,300,200);
     }
-    
+
     public void createApple()
     {
         Apple apple = new Apple();
@@ -47,7 +43,7 @@ public class MyWorld extends World
         addObject(apple,x,y);
         apple.setSpeed(level);
     }
-    
+
     public void createCat()
     {
         int x = (0);
@@ -55,7 +51,7 @@ public class MyWorld extends World
         addObject(cat,x,y);
         cat.setSpeed(1 + level);
     }
-    
+
     public void increaseScore()
     {
         score++;
@@ -70,12 +66,40 @@ public class MyWorld extends World
             level = 1;
         }
     }
-    
+
     public void decreaseScore(int sc)
     {
         score = score - sc;
         scoreLabel.setValue(score);
     }
-    
-    
+
+    public void act()
+    {
+        int number = 0;
+        if(Greenfoot.isKeyDown("space"))
+        {
+            number++;
+            if(number <= 2)
+            {
+                Elephant elephant = new Elephant();
+                addObject(elephant,400,300);
+                elephant.setSize(score);
+            }
+        }
+
+        if(Greenfoot.isKeyDown("m"))
+        {
+            number++;
+            if(number <= 2)
+            {
+                ElephantTwo elephant = new ElephantTwo();
+                addObject(elephant,100,300);
+                elephant.setSize(score);
+
+                Elephant elephantTwo = new Elephant();
+                addObject(elephantTwo,400,300);
+                elephant.setSize(score);
+            }
+        }
+    }
 }
