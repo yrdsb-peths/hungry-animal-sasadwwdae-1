@@ -39,7 +39,7 @@ public class MyWorld extends World
         {
             ElephantTwo elephantTwo = new ElephantTwo();
             addObject(elephantTwo,100,300);
-            Elephant.setSize(score);
+            ElephantTwo.setSize(score);
 
             Elephant elephant = new Elephant();
             addObject(elephant,400,300);
