@@ -36,13 +36,21 @@ public class GameOver extends World
         Label label = new Label("Game Over", 80);
         addObject(label,282,190);
         label.setLocation(300,200);
+        Label label2 = new Label("press 1 or 2 to restart", 40);
+        addObject(label2,271,290);
+        label2.setLocation(326,288);
     }
     
+
     public void act()
     {
-        if(changeWorld)
+        if(Greenfoot.isKeyDown("1"))
         {
-            MyWorld gameWorld = new MyWorld();
+            MyWorld gameWorld = new MyWorld(1);
+            Greenfoot.setWorld(gameWorld);
+        }else if(Greenfoot.isKeyDown("2"))
+        {
+            MyWorld gameWorld = new MyWorld(2);
             Greenfoot.setWorld(gameWorld);
         }
     }
