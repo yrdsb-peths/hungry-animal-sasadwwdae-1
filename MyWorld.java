@@ -12,13 +12,13 @@ public class MyWorld extends World
     Label scoreLabel;
     int level = 1;
     Cat cat = new Cat();
-    int numberPlayer = 1;
+    int numPlayer;
 
-    /**
-     * Constructor for objects of class MyWorld.
-     * 
-     */
-    public MyWorld()
+    public MyWorld(){
+        this(1);
+    }
+    
+    public MyWorld(int numPlayers)
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(600, 400, 1, false); 
@@ -29,13 +29,13 @@ public class MyWorld extends World
         createApple();
         createCat();
 
-        if(numberPlayer == 1)
+        if(numPlayers == 1)
         {
             Elephant elephant = new Elephant();
             addObject(elephant,400,300);
             elephant.setSize(score);
         }
-        if(numberPlayer == 2)
+        else if(numPlayers == 2)
         {
             ElephantTwo elephantTwo = new ElephantTwo();
             addObject(elephantTwo,100,300);
