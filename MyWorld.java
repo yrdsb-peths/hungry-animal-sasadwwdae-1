@@ -12,6 +12,7 @@ public class MyWorld extends World
     Label scoreLabel;
     int level = 1;
     Cat cat = new Cat();
+    int numberPlayer = 1;
 
     /**
      * Constructor for objects of class MyWorld.
@@ -27,6 +28,23 @@ public class MyWorld extends World
 
         createApple();
         createCat();
+
+        if(numberPlayer == 1)
+        {
+            Elephant elephant = new Elephant();
+            addObject(elephant,400,300);
+            elephant.setSize(score);
+        }
+        if(numberPlayer == 2)
+        {
+            ElephantTwo elephantTwo = new ElephantTwo();
+            addObject(elephantTwo,100,300);
+            Elephant.setSize(score);
+
+            Elephant elephant = new Elephant();
+            addObject(elephant,400,300);
+            elephant.setSize(score);
+        }
     }
 
     public void gameOver()
@@ -72,34 +90,5 @@ public class MyWorld extends World
         score = score - sc;
         scoreLabel.setValue(score);
     }
-
-    public void act()
-    {
-        int number = 0;
-        if(Greenfoot.isKeyDown("space"))
-        {
-            number++;
-            if(number <= 2)
-            {
-                Elephant elephant = new Elephant();
-                addObject(elephant,400,300);
-                elephant.setSize(score);
-            }
-        }
-
-        if(Greenfoot.isKeyDown("m"))
-        {
-            number++;
-            if(number <= 2)
-            {
-                ElephantTwo elephant = new ElephantTwo();
-                addObject(elephant,100,300);
-                elephant.setSize(score);
-
-                Elephant elephantTwo = new Elephant();
-                addObject(elephantTwo,400,300);
-                elephant.setSize(score);
-            }
-        }
-    }
+}
 }

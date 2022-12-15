@@ -25,9 +25,17 @@ public class TitleScreen extends World
 
     public void act()
     {
-        if(Greenfoot.isKeyDown("space"))
+        if(Greenfoot.isKeyDown("1"))
         {
             MyWorld gameWorld = new MyWorld();
+            gameWorld.numberPlayer = 1;
+            Greenfoot.setWorld(gameWorld);
+        }
+        
+        if(Greenfoot.isKeyDown("2"))
+        {
+            MyWorld gameWorld = new MyWorld();
+            gameWorld.numberPlayer = 2;
             Greenfoot.setWorld(gameWorld);
         }
         
@@ -48,13 +56,13 @@ public class TitleScreen extends World
         addObject(elephant,485,78);
         elephant.setLocation(474,86);
         elephant.setLocation(488,173);
-        Label label = new Label("press space to start the game", 40);
+        Label label = new Label("press 1 to start the game", 40);
         addObject(label,310,297);
         label.setLocation(310,298);
         Label label2 = new Label("Press <i> to see the introcuction", 40);
         addObject(label2,290,340);
         label2.setLocation(325,347);
-        Label label3 = new Label("Press m if have two player", 40);
+        Label label3 = new Label("Press 2 if have two player", 40);
         addObject(label3,214,259);
         label3.setLocation(326,253);
         label3.setLocation(296,254);
